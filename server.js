@@ -9,7 +9,6 @@ const DanTocRoute = require('./routes/dantoc/route');
 const CongtyRoute = require('./routes/congty/route');
 const HopdongRoute = require('./routes/hopdong/route');
 
-
 connectDB.getConnect();
 
 const app = express();
@@ -17,7 +16,6 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cors());
-
 
 require('colors');
 //>> Use route here
@@ -29,6 +27,6 @@ app.use('/api/congty', CongtyRoute);
 app.use('/api/hopdong', HopdongRoute);
 
 const PORT = process.env.PORT;
-app.listen(PORT, ()=>{
+app.listen(PORT, () => {
   console.log(`Listen on PORT ${PORT}`);
 });
