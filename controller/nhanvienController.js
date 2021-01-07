@@ -78,7 +78,7 @@ exports.SuaNhanVien = asyncMiddleware(async (req, res, next) => {
 
 //>> THÊM NHÂN VIÊN
 exports.ThemNhanVien = asyncMiddleware(async (req, res, next) => {
-  let {
+  const {
     tennhanvien,
     gioitinh,
     sdt,
@@ -92,17 +92,21 @@ exports.ThemNhanVien = asyncMiddleware(async (req, res, next) => {
     idtrinhdo,
   } = req.body;
 
-  let rs = NhanVien.save(function (err) {
-    if (err) {
-      if (err.keyValue) {
-        return res
-          .status(400)
-          .json(new SuccessResponse(400, 'Email này đã được đăng ký'));
-      } else {
-        return res.status(400).json(new ErrorResponse(400, err));
-      }
-    } else res.status(200).json(new SuccessResponse(200, rs, 'Thêm thành công'));
+  const newStaff = new NhanVien({
+    tennhanvien,
+    gioitinh,
+    sdt,
+    email,
+    diachi,
+    ngaysinh,
+    quequan,
+    trangthai,
+    idchucvu,
+    iddantoc,
+    idtrinhdo,
   });
+  let rs = await newStaff.save();
+  res.status(200).json({ rs });
 });
 
 //>> XÓA NHÂN VIÊN
