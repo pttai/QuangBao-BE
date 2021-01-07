@@ -1,0 +1,7 @@
+[
+  {
+    "iduser": {"$oid": "5fdcfdebf091941ebcf0cdb3"},
+    "idnhanvienchinhthuc": {"$oid": "5fdd00cecf103522589a2727"},
+    "idchucvu": {"$oid": "5fdcfd79f091941ebcf0cdaf"}
+  }
+]

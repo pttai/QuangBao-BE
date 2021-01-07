@@ -1,0 +1,11 @@
+﻿[
+  {
+    "loaihopdong": "Hợp đồng xác định thời hạn",
+    "ngaybatdau": "1986-05-18T16:00:00.000+00:00",
+    "ngayketthuc": "1986-05-18T16:00:00.000+00:00",
+    "noidung": "Nội dung hợp động",
+    "idnhanvien": {"$oid": "5ff2982b89a45d0b189d882e"},
+    "idcongty": {"$oid": "5ff4ad4be582d427fc86699b"},
+    "idchucvu": {"$oid": "5ff2895e89a45d0b189d8824"}
+  }
+]
